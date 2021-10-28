@@ -12,19 +12,19 @@
 	<header>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div class="container">
-				<a class="navbar-brand" href="index.html">Cut your URL</a>
+				<a class="navbar-brand" href="index.php">Cut your URL</a>
 				<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav me-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a class="nav-link active" aria-current="page" href="index.html">Главная</a>
+							<a class="nav-link active" aria-current="page" href="index.php">Главная</a>
 						</li>
 					</ul>
 					<ul class="navbar-nav ms-auto mb-2 mb-lg-0">
 						<li class="nav-item">
-							<a href="login.html" class="btn btn-primary">Войти</a>
+							<a href="login.php" class="btn btn-primary">Войти</a>
 						</li>
 					</ul>
 				</div>
@@ -32,24 +32,33 @@
 		</nav>
 	</header>
 	<main class="container">
-		<div class="row mt-5">
-			<div class="col">
-				<h2 class="text-center">Необходимо <a href="register.html">зарегистрироваться</a> или <a href="login.html">войти</a> под своей учетной записью</h2>
-			</div>
+		<div class="alert alert-success alert-dismissible fade show mt-3" role="alert">
+			Все ок
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+		</div>
+		<div class="alert alert-danger alert-dismissible fade show mt-3" role="alert">
+			А тут не ок
+			<button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 		</div>
 		<div class="row mt-5">
 			<div class="col">
-				<h2 class="text-center">Пользователей в системе: 100</h2>
+				<h2 class="text-center">Вход в личный кабинет</h2>
+				<p class="text-center">Если вы еще не зарегистрированы, то самое время <a href="register.php">зарегистрироваться</a></p>
 			</div>
 		</div>
-		<div class="row mt-5">
-			<div class="col">
-				<h2 class="text-center">Ссылок в системе: 200</h2>
-			</div>
-		</div>
-		<div class="row mt-5">
-			<div class="col">
-				<h2 class="text-center">Всего переходов по ссылкам: 300</h2>
+		<div class="row mt-3">
+			<div class="col-4 offset-4">
+				<form>
+					<div class="mb-3">
+						<label for="login-input" class="form-label">Логин</label>
+						<input type="text" class="form-control is-valid" id="login-input" required>
+					</div>
+					<div class="mb-3">
+						<label for="password-input" class="form-label">Пароль</label>
+						<input type="password" class="form-control is-invalid" id="password-input" required>
+					</div>
+					<button type="submit" class="btn btn-primary">Войти</button>
+				</form>
 			</div>
 		</div>
 	</main>
